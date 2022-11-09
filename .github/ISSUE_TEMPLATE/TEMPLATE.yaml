@@ -1,5 +1,6 @@
 name: GitHub Bug report issue template
 description: File a bug report
+title: "[BUG]"
 labels: ["bug"]
 assignees:
   - octocat

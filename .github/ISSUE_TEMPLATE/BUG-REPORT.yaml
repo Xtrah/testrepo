@@ -1,6 +1,5 @@
 name: Bug report
 description: Document a bug or unexpected behavior
-title: "[BUG]"
 labels: ["bug"]
 body:
   - type: markdown
@@ -8,26 +7,26 @@ body:
       value: |
         Providing detailed information helps your fellow developers create the best possible solution! 🙌📈
   - type: textarea
-    id: what-happened
+    id: problem
     attributes:
-      label: What happened?
-      description: ... and how can we reproduce the problem?
+      label: Problem
+      description: What's the issue and how can we reproduce it?
       placeholder: Specific details, filenames, and screenshots are all very helpful!
     validations:
       required: true
   - type: textarea
     id: expected-behaviour
     attributes:
-      label: What did you expect to happen?
-      description: ... or how is it supposed to work?
-      placeholder: Short description of what you expected to happen
+      label: Expected behaviour
+      description: What was supposed to happen?
+      placeholder: Specific details, filenames, and screenshots are all very helpful!
     validations:
       required: true
   - type: dropdown
-    id: system
+    id: platform
     attributes:
-      label: Where are you seeing the problem?
-      description: Can you find the same problem on other systems?
+      label: Platform
+      description: Can you find the same problem on other platforms?
       multiple: true
       options:
         - IDE/terminal
@@ -40,15 +39,24 @@ body:
     id: logs
     attributes:
       label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      description: Please copy and paste any relevant log output. This will be automatically formatted into shell code, so no need for backticks.
       render: shell
   - type: textarea
     id: suggestion
     attributes:
-      label: Do you have a suggestion on how to fix it?
+      label: Suggestion
       description: If you have an idea on how to fix the problem, please share it! You can even use [spoiler tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) to hide your proposal ✨
       placeholder: |
-        I think this could be fixed by...
-        ```js
-        // code goes here
+        I think this could be fixed in App.vue, ...
+        ```vue
+        // code
         ```
+        Relevant documentation can be found at ...
+  - type: checkboxes
+    id: setlabel
+    attributes:
+      label: Issue labels
+      description: Set the relevant labels on this issue, such as 'enhancement' and 'backend'.
+      options:
+        - label: I have set relevant labels on this issue
+          required: true

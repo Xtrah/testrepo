@@ -1,0 +1,35 @@
+name: Feature/enhancement suggestion
+description: A new feature or enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Providing detailed information helps your fellow developers create the best possible solution! 🙌📈
+  - type: textarea
+    id: background
+    attributes:
+      label: Background
+      description: How would you describe the issue on a non-technical level? What do we gain by solving the issue? 💰
+      placeholder: This feature would enable NTNUI to ...
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggestion
+      description: If you have an idea on how to implement it, please share it! You can even use [spoiler tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) to hide your proposal ✨
+      placeholder: |
+        I think the we could do something like, ...
+        ```python
+        // code
+        ```
+  - type: textarea
+    id: documentation
+    attributes:
+      label: Documentation
+      description: Relevant how-to's, discussions or wikis that might help solve the problem ⚡
+      placeholder: https://stackoverflow.com/questions/69...
+  - type: markdown
+    id: setlabel
+    attributes:
+      value: Remember to set relevant labels on this issue, i.e. `feature` or `enhancement`, and `backend` and/or `frontend`!
