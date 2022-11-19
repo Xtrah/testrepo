@@ -1,4 +1,4 @@
-name: Bug report
+name: Bug report form
 description: Document a bug or unexpected behavior
 labels: ["bug"]
 body:
@@ -10,8 +10,11 @@ body:
     id: problem
     attributes:
       label: Problem
-      description: What's the issue and how can we reproduce it?
-      placeholder: Specific details, filenames, and screenshots are all very helpful!
+      description: What's the issue and how can we reproduce it? 🤔
+      placeholder: |
+        1. Login as ...
+        2. Click on ...
+        3. Observe that ...
     validations:
       required: true
   - type: textarea
@@ -19,14 +22,14 @@ body:
     attributes:
       label: Expected behaviour
       description: What was supposed to happen?
-      placeholder: Specific details, filenames, and screenshots are all very helpful!
+      placeholder: Details and screenshots are very helpful!
     validations:
       required: true
   - type: dropdown
-    id: platform
+    id: device
     attributes:
-      label: Platform
-      description: Can you find the same problem on other platforms?
+      label: Device
+      description: Does the issue occur on one or more types of devices/browsers/platforms?
       multiple: true
       options:
         - IDE/terminal
@@ -39,24 +42,20 @@ body:
     id: logs
     attributes:
       label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into shell code, so no need for backticks.
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
   - type: textarea
     id: suggestion
     attributes:
       label: Suggestion
-      description: If you have an idea on how to fix the problem, please share it! You can even use [spoiler tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) to hide your proposal ✨
+      description: If you have any idea on how to fix the problem, share it! You can even use [spoiler tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) to hide your proposed solution ✨
       placeholder: |
-        I think this could be fixed in App.vue, ...
+        I think this could be fixed in App.vue by adding a new prop to ...
         ```vue
-        // code
+        // code ...
         ```
         Relevant documentation can be found at ...
-  - type: checkboxes
+  - type: markdown
     id: setlabel
     attributes:
-      label: Issue labels
-      description: Set the relevant labels on this issue, such as 'enhancement' and 'backend'.
-      options:
-        - label: I have set relevant labels on this issue
-          required: true
+      value: Finally, before submitting, remember to add relevant labels, e.g. `priority`, `backend` and/or `frontend`! 🚀
